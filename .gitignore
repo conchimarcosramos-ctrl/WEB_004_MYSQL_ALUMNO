@@ -25,3 +25,5 @@ composer.lock
 # Cachés
 /tmp/
 /cache/
+
+/config/database.php

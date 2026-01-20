@@ -2,10 +2,10 @@
 //configuramos la base de datos
 
 //desarrollamos la base de datos en localhost con mysql y xampp
-define('DB_HOST', 'localhost');
-define('DB_USER', 'alumno_tienda_usr');
-define('DB_PASS', '123456789Abc');
-define('DB_NAME', 'alumno_tienda_db');
+define('DB_HOST', 'vl24381.dinaserver.com');
+define('DB_USER', 'cntg_usr_tienda');
+define('DB_PASS', '#123456Abc@');
+define('DB_NAME', 'cntg_tienda');
 define('DB_CHARSET', 'utf8mb4');
 define('DB_PORT', '3306');
 
