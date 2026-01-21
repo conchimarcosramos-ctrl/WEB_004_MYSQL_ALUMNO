@@ -4,7 +4,7 @@
 //desarrollamos la base de datos en localhost con mysql y xampp
 define('DB_HOST', 'vl24381.dinaserver.com');
 define('DB_USER', 'cntg_usr_tienda');
-define('DB_PASS', '#123456Abc@');
+define('DB_PASS', 'JOg57R476@}[');
 define('DB_NAME', 'cntg_tienda');
 define('DB_CHARSET', 'utf8mb4');
 define('DB_PORT', '3306');
@@ -31,11 +31,11 @@ function ejecutarQuery ($sql, $tipos ='', $parametros = []) {
         if ($stmt === false) {
             return false;
         }   
-        $stmt->bind_parm($tipos, ...$parametros);
+        $stmt->bind_param($tipos, ...$parametros);
         $stmt->execute();
         return $stmt;   
     } else {
-        $conexion->query($sql);
+        return $conexion->query($sql);
     }
 }
 

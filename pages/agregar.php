@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once '../config/database.php';
 $mensaje = "";
 $tipo_mensaje = "";
 
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $precio = floatval($_POST['precio']?? 0);
     $cantidad = intval($_POST['cantidad']?? 0);
 
-    if (empty($nombre && $precio) > 0){
+    if (!empty($nombre) && $precio > 0 && $cantidad > 0){
         $stmt = $conexion->prepare("INSERT INTO productos (nombre, descripcion, precio, cantidad) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssdi", $nombre, $descripcion, $precio, $cantidad);
 
@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar producto </title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">

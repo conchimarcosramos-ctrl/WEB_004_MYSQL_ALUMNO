@@ -1,10 +1,10 @@
 <?php
-require_once 'config/database.php';
+require_once '../config/database.php';
 
 if (isset($_GET['id'])) {
     $id = intval ($_GET['id']);
 
-    $stmt = $conexion->prepare("DELETE FROM productos WHERE id = ?");
+    $stmt = $conexion->prepare("DELETE FROM productos WHERE id_productos = ?");
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
