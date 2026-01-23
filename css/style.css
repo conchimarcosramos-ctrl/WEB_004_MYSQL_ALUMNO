@@ -203,3 +203,20 @@ btn-eliminar:hover{
         padding: 8px;
     }
 }
+
+/* Validación de formularios */
+
+.error-mensaje{
+    display: none;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.input-error{
+    border-color: #e74c3c !important;
+    background-color: #fadbd8;
+}
+.input-error.focus{
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.3) !important;
+}

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $precio = floatval($_POST['precio']?? 0);
     $cantidad = intval($_POST['cantidad']?? 0);
 
-    if (!empty($nombre) && $precio > 0 && $cantidad > 0){
+    if (!empty($nombre) && $precio > 0){
         $stmt = $conexion->prepare("INSERT INTO productos (nombre, descripcion, precio, cantidad) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssdi", $nombre, $descripcion, $precio, $cantidad);
 
